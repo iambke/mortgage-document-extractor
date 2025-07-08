@@ -1,0 +1,33 @@
+<!-- CORRECTED version -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mortgage Document Extractor</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Mortgage Document Extractor</h1>
+
+    <div class="upload-area">
+      <input type="file" id="fileInput" accept=".png,.jpg,.jpeg,.pdf" />
+      <button id="uploadBtn">Extract Data</button>
+    </div>
+
+    <div id="status"></div>
+
+    <div id="result" class="hidden">
+      <h2>Extracted Data</h2>
+      <table>
+        <tr><th>Borrower Name</th><td id="borrower"></td></tr>
+        <tr><th>Loan Amount</th><td id="loan"></td></tr>
+        <tr><th>Property Address</th><td id="address"></td></tr>
+      </table>
+    </div>
+  </div>
+
+  <script src="/static/script.js" defer></script>
+</body>
+</html>
