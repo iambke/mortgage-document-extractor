@@ -26,15 +26,26 @@ h1 {
 .upload-area {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 10px;
+  border: 2px dashed #ccc;
+  padding: 20px;
+  border-radius: 12px;
+  background: #fafafa;
+  transition: border-color 0.3s ease, background 0.3s ease;
+}
+
+.upload-area.dragover {
+  border-color: #007bff;
+  background: #f0f8ff;
 }
 
 input[type="file"] {
   padding: 10px;
-  border: 2px dashed #ccc;
   border-radius: 8px;
-  background: #fafafa;
+  background: #fff;
   cursor: pointer;
+  border: none;
 }
 
 button {
@@ -52,10 +63,17 @@ button:hover {
   background-color: #0056b3;
 }
 
-#status {
+.status {
   margin-top: 15px;
-  color: #555;
   font-size: 14px;
+}
+
+.status.success {
+  color: green;
+}
+
+.status.error {
+  color: red;
 }
 
 #result {
